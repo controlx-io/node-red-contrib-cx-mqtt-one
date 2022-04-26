@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-cx-mqtt-one",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "One MQTT node for all connections. Fully dynamic and controlled by the incoming message.",
   "keywords": [
     "node-red",
