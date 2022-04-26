@@ -2,10 +2,16 @@
 
 One MQTT node for all connections. Fully dynamic and controlled by the incoming message.
 
+Functionality:
+ - Creates a broker connection on "__add_broker" (brokerId has to be generated and used as property in the message)
+ - Controls the subs and pubs to this broker via "__subscribe" and "__publish" with valid broker ID
+
+
+
 ### Incoming Message Example
 ```typescript
 interface ISubscribeMessage {
-  command: "__subscribe", // to unsubscribe send payload.subscriptions = []
+  command: "__subscribe", // to unsubscribe send [] in payload.subscriptions
   brokerId?: string | number,
   payload?: {
       subscriptions?: string[],
